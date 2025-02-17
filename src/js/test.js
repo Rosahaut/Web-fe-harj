@@ -2,13 +2,13 @@
 const getData = async () => {
   try {
     //tehrään pyyntö HTTP GET
-    const response = await fetch("https://api.chucknorris.io/jokes/random");
+    const response = await fetch('https://api.chucknorris.io/jokes/random');
     console.log(response);
     //muunnetaan json muotoon
     const data = await response.json();
     console.log(data);
   } catch (error) {
-    console.error("Virhe:", error);
+    console.error('Virhe:', error);
   }
 };
 
@@ -17,13 +17,13 @@ function synchronousFunction() {
   let number = 1;
   for (let i = 1; i < 100000; i++) {
     number += i;
-    console.log("synchronousFunction running");
+    console.log('synchronousFunction running');
   }
-  console.log("regular function complete", number);
+  console.log('regular function complete', number);
 }
 
 function synchronousFunction2() {
-  console.log("mikä kestää");
+  console.log('mikä kestää');
 }
 
 //synchronousFunction2();

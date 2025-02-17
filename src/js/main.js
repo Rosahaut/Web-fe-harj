@@ -1,13 +1,14 @@
-import "../css/style.css";
-import "../css/snackbar.css";
-import { getItems } from "./items.js";
-import { getUsers, addUser, getUsersById } from "./users.js";
-import { getData } from "./test.js";
+import '../css/style.css';
+import '../css/snackbar.css';
+import { getItems } from './items.js';
+import { getUsers, addUser, getUsersById } from './users.js';
+import { getData } from './test.js';
+import { getEntries} from './entries.js';
 
 
-document.querySelector("#app").innerHTML = "Oman APIn harjoituksia";
+document.querySelector('#app').innerHTML = 'Oman APIn harjoituksia';
 
-console.log("moro maailma scriptit alkaa");
+console.log('moro maailma scriptit alkaa');
 
 getData();
 
@@ -28,6 +29,9 @@ getUserByIdBtn.addEventListener('click', async () => {
   if (userId) {
     await getUsersById(userId);
   } else {
-    console.log("Anna käyttäjän ID");
+    console.log('Anna käyttäjän ID');
   }
 });
+
+const getEntriesBtn = document.querySelector('.get_entries');
+getEntriesBtn.addEventListener('click', getEntries);

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        padding-bottom: 1px;
+        background-color: rgb(179, 177, 177);
+      }
+      .wrapper {
+        max-width: 950px;
+        margin: 20px auto;
+        background: linear-gradient(to right, #070707, #9c999e);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      header {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border-bottom: 2px solid #71359a;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+        color: #d358fc;
+      }
+      header nav a {
+        text-decoration: none;
+        color: #d358fc;
+        margin-right: 15px;
+        font-weight: bold;
+      }
+      .login-button {
+        background-color: #d358fc;
+        color: black;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lisää varjo, joka nostaa painiketta */
+        transition: all 0.3s ease; /* Siirtymät effetit */
+      }
+
+      .login-button:hover {
+        background-color: #a234d8; /* Tummempi väri hover-tilassa */
+        transform: translateY(-3px); /* Nostaa painiketta hover-tilassa */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Tummempi varjo hover-tilassa */
+      }
+      main {
+        max-width: 900px; /* Rajaa headerin leveyden */
+        margin: 0 auto; /* Keskittää headerin */
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding-top: 10px;
+        padding-bottom: 1px;
+      }
+      #left {
+        background: linear-gradient(to top, #d358fc, #e6d9f2);
+        flex: 1;
+        padding: 10px;
+        border-radius: 15px;
+      }
+
+      #left div{
+        margin-bottom: 15px;
+      }
+
+      #right {
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+      }
+      #upper {
+        flex: 1;
+        background-image: url("/img/kitten.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+      }
+
+      #lower {
+        background: linear-gradient(to top, #d358fc, #e6d9f2);
+        flex: 1;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      #lower h2 {
+        color: #d358fc;
+        padding-left: 10px;
+      }
+
+      #lower h2::before {
+        content: "🐈";
+        margin-right: 10px;
+      }
+
+      footer {
+        max-width: 900px;
+        margin: 0 auto;
+        background: radial-gradient(
+          circle,
+          #561184 0%,
+          #624776 60%,
+          #070707 100%
+        );
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>🐾 Cat Blog</h1>
+        <nav>
+          <a href="#">HOME</a>
+          <a href="#">CATS</a>
+        </nav>
+        <button class="login-button">Login</button>
+      </header>
+      <main>
+        <!-- child items -->
+        <div id="left">
+          <h2>Recent posts</h2>
+          <div>✧ Latest cat post</div>
+          <div>✧ Eldest cat post</div>
+        </div>
+        <!-- flex parent -->
+        <div id="right">
+          <!-- flex child -->
+          <div id="upper"></div>
+          <div id="lower">
+            <h2>Cool Cat</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum in
+              hic, eaque repudiandae impedit voluptates tempora molestiae! Magni
+              nemo nesciunt recusandae. Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Explicabo quod assumenda tenetur doloribus
+              quisquam consectetur ipsum ducimus voluptatibus quam rem magni
+              dolores expedita alias adipisci nam, reiciendis officia fugit quo.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Ab vitae ipsa quibusdam repudiandae amet nihil sapiente neque expedita dolore 
+              provident nemo sit magni maxime laborum, officiis aspernatur voluptatibus illo vero.
+            </p>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>Flexbox layout example</p>
+      </footer>
+    </div>
+  </body>
+</html>

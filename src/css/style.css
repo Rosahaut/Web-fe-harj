@@ -170,11 +170,55 @@ pre {
   background-color: aliceblue;
 }
 
+dialog {
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #009879;
+  border-radius: 10px;
+}
+
+::backdrop {
+  background-image: linear-gradient(45deg, rgb(41, 7, 213), rgb(50, 54, 151), rgb(21, 94, 75), rgb(6, 77, 6) );
+  opacity: 0.75;
+}
+
+.card {
+  min-height: 300px;
+  width: 400px;
+  background-color: #009879;
+  display: flex;
+  padding: 1rem;
+  box-shadow: #213547;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.card-area, .card-area2 {
+  background-color: #646cff;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*vasen*/
+.card-img {
+  flex: 1;
+
+}
+
+.card-img img {
+  width: 100px;
+}
+
+/*oikea*/
+.card-diary{
+  flex: 4;
+}
+
+
 @media screen and (max-width: 800px) {
   .forms {
     flex-direction: column;
   }
 }
-
-
-

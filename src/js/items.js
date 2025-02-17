@@ -1,4 +1,4 @@
-import { fetchData } from "./fetch.js";
+import { fetchData } from './fetch.js';
 /* //oma rajapinnan kutsu
 const getItems = async () => {
   try {
@@ -20,11 +20,11 @@ const getItems = async () => {
 }; */
 
 const getItems = async () => {
-  const url = "http://localhost:3000/api/items";
+  const url = 'http://localhost:3000/items';
   const items = await fetchData(url);
 
   if (items.error) {
-    console.log("virhe tapahtui fetch haussa");
+    console.log('virhe tapahtui fetch haussa');
     return;
   }
 
