@@ -108,7 +108,7 @@
 
   {
     "username": "Uusi käyttäjä",
-    "password": "salakala",
+    "password": "password",
     "email": "newuser@example.com"
   }</pre
           >
@@ -126,7 +126,7 @@
               id="password"
               type="password"
               name="password"
-              placeholder="salakala"
+              placeholder="password"
             />
             <label for="password">Email</label>
             <input
@@ -145,7 +145,7 @@
         </div>
       </div>
 
-      <h3>Flexboxilla tehdyt kortit - Runko</h3>
+      <h3>Cards created with Flexbox - Framework</h3>
       <!-- kortit sisältävä flex parent -->
       <section class="card-area">
       <section class="card-area2">
@@ -153,12 +153,12 @@
         <div class="card">
           <!-- vasen puoli jossa kuva -->
           <div class="card-img">
-            <img src="/img/joo.png" alt="" />
+            <img src="/img/diary.jpg" alt="Diary Image" />
           </div>
           <!-- oikea puoli jossa päiväkirjamerkintä-->
           <div class="card-diary">
             <!-- tänne myös flexbox rakenne -->
-            Tänne dataa
+            Some data here
           </div>
         </div>
 
@@ -166,18 +166,19 @@
         <div class="card">
           <!-- vasen puoli jossa kuva -->
           <div class="card-img">
-            <img src="/img/joo.png" alt="" />
+            <img src="/img/diary.jpg" alt="Diary Image" />
           </div>
           <!-- oikea puoli jossa päiväkirjamerkintä-->
           <div class="card-diary">
             <!-- tänne myös flexbox rakenne -->
-            Tänne dataa
+            Some data here
           </div>
         </div>
       </section>
-      <h3>Flexboxilla tehty kortti + Fetch + Itse luodut elementit</h3>
 
-      <button class="get_entries">Hae päiväkirjamerkinnät</button>
+      <h3>Card created with Flexbox + Fetch + Custom elements</h3>
+
+      <button class="get_entries">Fetch diary entries</button>
       <section class="card-area2" id="diary"></section>
     </main>
 
